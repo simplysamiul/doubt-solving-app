@@ -1,0 +1,28 @@
+.menu-area{
+    background: #5885AF;
+    font-family: serif;
+}
+.menu-container{
+    padding: 30px 50px;
+}
+.menu-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu-content a{
+    margin: 15px 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+.menu-login{
+    background: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.menu-login a{
+    margin: 0;
+}
