@@ -1,20 +1,23 @@
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import Preloader from "../../custome/Preloader";
 import '../../../styles/Register.css';
+import useAuth from "../../../hooks/useAuth";
+import { Alert } from "@mui/material";
 
 const Login = () => {
-    const { register, handleSubmit } = useForm();
-    const [loading, setLoading] = useState(false);
+    const { register, handleSubmit, reset } = useForm();
+    const {loginUser, isLoading, user, error} = useAuth();
     const onSubmit = data => {
-        setLoading(true);
-        console.log(data)
-        setLoading(false);
+        const email = data.email;
+        const password = data.pass;
+        // call user login function
+        loginUser(email, password);
+        reset();
     };
     return (
         <div className='auth-form-area'>
-           {loading ? <Preloader />
+           {isLoading ? <Preloader />
            :<div className="auth-form-container">
                 <h1>Login</h1>
                 <form onSubmit={handleSubmit(onSubmit)}>
@@ -23,6 +26,8 @@ const Login = () => {
                     <button type="submit">Submit</button>
                 </form>
                 <Link to="/register">Want to Create account ?</Link>
+                {error && <Alert severity="error">{error}!</Alert>}
+                {user.email && <Alert severity="success">User login Successfully !</Alert>}
             </div>}
         </div>
     );
