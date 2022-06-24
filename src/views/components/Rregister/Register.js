@@ -7,7 +7,7 @@ import { Alert } from "@mui/material";
 
 const Register = () => {
     const { register, handleSubmit, reset } = useForm();
-    const {createUser, isLoading, error, user} = useAuth();
+    const {createUser, isLoading, error} = useAuth();
     const onSubmit = data => {
         const email = data.email;
         const name = data.name;
@@ -37,7 +37,6 @@ const Register = () => {
                 </form>
                 <Link to="/login">Already have an account ?</Link>
                 {error && <Alert severity="error">{error}!</Alert>}
-                {user.email && <Alert severity="success">User Create Successfully !</Alert>}
             </div>}
         </div>
     );

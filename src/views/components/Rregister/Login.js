@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Preloader from "../../custome/Preloader";
 import '../../../styles/Register.css';
 import useAuth from "../../../hooks/useAuth";
@@ -8,11 +8,12 @@ import { Alert } from "@mui/material";
 const Login = () => {
     const { register, handleSubmit, reset } = useForm();
     const {loginUser, isLoading, user, error} = useAuth();
+    const location = useLocation();
     const onSubmit = data => {
         const email = data.email;
         const password = data.pass;
         // call user login function
-        loginUser(email, password);
+        loginUser(email, password, location);
         reset();
     };
     return (
@@ -27,7 +28,6 @@ const Login = () => {
                 </form>
                 <Link to="/register">Want to Create account ?</Link>
                 {error && <Alert severity="error">{error}!</Alert>}
-                {user.email && <Alert severity="success">User login Successfully !</Alert>}
             </div>}
         </div>
     );

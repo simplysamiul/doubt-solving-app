@@ -22,5 +22,5 @@ class Request {
         return await instance.delete(url);
     }
 }
-
-export default new Request();
+const httpReq = new Request();
+export default httpReq;

@@ -1,12 +1,13 @@
-import httpService from "./http.service";
+import httpReq from "./http.service";
 
 class AuthService {
     async userRegister(body){
-        const {data} = await httpService.post("/user", body);
+        console.log(body);
+        const {data} = await httpReq.post("/user", body);
         return data;
     }
     async getSpecificUser(email){
-        const {data} = await httpService.get(`user?email=${email}`);
+        const {data} = await httpReq.get(`user?email=${email}`);
         return data;
     }
 }

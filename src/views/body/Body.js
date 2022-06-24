@@ -1,11 +1,13 @@
 import React, { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import PrivateOutlet from '../../privateRoute/PrivateOutlet';
 import Preloader from '../custome/Preloader';
 
 // Code splitting
 const Home = React.lazy(() => import('../pages/Home'));
 const Login = React.lazy(() => import('../components/Rregister/Login'));
 const Register = React.lazy(() => import('../components/Rregister/Register'));
+const RaiseDoubt = React.lazy(() => import('../pages/RaiseDoubt'));
 
 const Body = () => {
     return (
@@ -13,8 +15,13 @@ const Body = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Home />} />
+                <Route path="/all_doubt" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
+                {/* private route manage */}
+                <Route path='/*' element={<PrivateOutlet />}>
+                    <Route path="raise_doubt" element={<RaiseDoubt />} />
+                </Route>
             </Routes>
         </Suspense>
     );
