@@ -1,10 +1,11 @@
 import React from 'react';
+import UploadDoubt from '../components/studentsRoute/UploadDoubt';
 
 const RaiseDoubt = () => {
     return (
-        <div>
-            this is raise doubt
-        </div>
+        <>
+            <UploadDoubt />
+        </>
     );
 };
 

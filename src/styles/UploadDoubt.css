@@ -1,0 +1,36 @@
+.upload-doubt-container{
+    margin: 100px 120px;
+    font-family: serif;
+}
+.upload-doubt-form{
+    width: 80%;
+    margin: auto;
+    background: #e6e4e4;
+    border: 3px solid grey;
+    padding: 50px;
+}
+.upload-doubt-form form input, label, textarea, button{
+    display: block;
+    width: 60%;
+    margin: auto;
+}
+.upload-doubt-form form label{
+    margin-top: 15px;
+    font-size: 20px;
+}
+.upload-doubt-form form textarea, input{
+    font-size: 16px;
+    padding: 8px;
+}
+.upload-doubt-form form textarea, input:focus{
+    outline: none;
+    border: 2px solid grey;
+}
+.upload-doubt-form form button{
+    margin-top: 25px;
+    border: none;
+    background: #4813c4;
+    pad: 10px 0;
+    font-size: 18px;
+    color: white;
+}
