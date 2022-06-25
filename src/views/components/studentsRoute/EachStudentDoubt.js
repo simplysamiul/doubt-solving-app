@@ -1,15 +1,15 @@
-import React from 'react';
+import '../../../styles/EachStudentDoubt.css';
 
 const EachStudentDoubt = ({eachDoubt}) => {
-    const {description, email, name, postDate, title} = eachDoubt;
+    const {description, name, postDate, title} = eachDoubt;
     
     return (
-        <div className='reach-doubt-cart'>
-        <div className="doubt-uploader-info">
+        <div className='student-doubt-cart'>
+        <div className="student-doubt-info">
             <p>{name}</p>
             <p>{postDate}</p>
         </div>
-        <div className="doubt-description">
+        <div className="student-doubt-description">
             <h1>{title}</h1>
             <p>Description : {description}</p>
         </div>

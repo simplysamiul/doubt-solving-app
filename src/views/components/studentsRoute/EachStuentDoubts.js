@@ -19,7 +19,7 @@ const EachStuentDoubts = () => {
     },[user.email]);
     console.log(eachDoubts);
     return (
-        <div className='ypur-doubt-area'>
+        <div className='your-doubt-area'>
            {loading ? <Preloader />
            :<div className="your-doubt-container" style={{margin : "80px"}}>
                 {

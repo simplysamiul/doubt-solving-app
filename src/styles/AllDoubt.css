@@ -11,7 +11,8 @@
 
 /* each doubt */
 .reach-doubt-cart{
-    background: #B9B7BD;
+    background: #C5CFD8;
+    border: 3px solid #6f8da8;
     margin: 30px 10px;
     color: black;
     padding: 15px 20px;
@@ -23,7 +24,7 @@
     justify-content: space-between;
 }
 .doubt-description{
-    border: 2px solid #4e4e4e;
+    border: 2px solid #6f8da8;
     padding: 15px;
     margin: 20px 0;
     border-radius: 10px;
@@ -31,9 +32,12 @@
 .doubt-description h1{
     font-size: 30px;
 }
+.doubt-description p{
+    font-size: 20px;
+}
 .comment-area{
     margin-top: 20px;
-    border-top: 2px solid #4e4e4e;
+    border-top: 2px solid #6f8da8;
 }
 
 /* doubt form */
@@ -52,10 +56,11 @@
     padding: 5px 8px;
     border-radius: 5px;
     background: #e2e2e2;
+    border: 2px solid #6f8da8;
 }
 .comments-form-container form input:focus{
     outline: none;
-    border: 2px solid grey;
+    border: 2px solid #6f8da8;
 }
 .comments-form-container form button{
     font-size: 16px;
@@ -63,13 +68,10 @@
 }
 
 /* Comment design */
-.each-comments-container{
-    
-}
 .each-comment{
     padding: 8px;
     margin-top: 15px;
-    background:#a2a0a5;
+    background:#E0E6EC;
     border-radius: 10px;
 }
 .each-comment h5{

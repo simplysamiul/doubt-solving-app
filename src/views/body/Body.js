@@ -9,6 +9,7 @@ const Login = React.lazy(() => import('../components/Rregister/Login'));
 const Register = React.lazy(() => import('../components/Rregister/Register'));
 const RaiseDoubt = React.lazy(() => import('../pages/RaiseDoubt'));
 const YourDoubt = React.lazy(() => import('../pages/YourDoubt'));
+const UnResolved = React.lazy(() => import('../pages/UnResolved'));
 
 const Body = () => {
     return (
@@ -22,6 +23,7 @@ const Body = () => {
                     <Route path="all_doubt" element={<Home />} />
                     <Route path="raise_doubt" element={<RaiseDoubt />} />
                     <Route path="your_doubt" element={<YourDoubt />} />
+                    <Route path="Unresolved" element={<UnResolved />} />
                 </Route>
             </Routes>
         </Suspense>
