@@ -1,9 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import DoubtService from '../../../manageApi/Doubt.Service';
+import Preloader from '../../custome/Preloader';
+import UnResolvedDoubt from './UnResolvedDoubt';
+import '../../../styles/UnResolvedDoubts.css';
 
 const UnResolvedDoubts = () => {
+    const [doubts, setDoubts] = useState([]);
+    const [loading, setLoading] = useState(false);
+    useEffect(() =>{
+        setLoading(true)
+        DoubtService.getAllDoubt()
+        .then(res => {
+            setDoubts(res);
+            setLoading(false);
+        })
+        .catch(err => {})
+    },[]);
     return (
-        <div>
-            fgaiuihgqo; hiquh
+        <div className='unresoolved-doubts-area'>
+            <h1>Solve Doubts</h1>
+            {loading ? <Preloader /> 
+            :<div className="unresoolved-doubts-container">
+                {
+                    doubts.map((doubt) => <UnResolvedDoubt 
+                    key={doubt._id}
+                    doubt={doubt}
+                    />)
+                }
+            </div>}
         </div>
     );
 };

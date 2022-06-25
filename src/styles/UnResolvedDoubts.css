@@ -1,0 +1,32 @@
+/* UnResolvedDoubts */
+.unresoolved-doubts-area{
+    margin: 100px;
+    font-family: serif;
+}
+.unresoolved-doubts-area h1{
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+.unresoolved-doubts-container{
+    margin: 50px 30px;
+}
+/* UnResolvedDoubt */
+.unresolved-doubt-conatiner{
+    background: #C5CFD8;
+    border: 3px solid #6f8da8;
+    margin: 20px 0;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.unresolved-doubt-conatiner h1{
+    font-size: 25px;
+}
+.unresolved-doubt-conatiner button{
+    border: none;
+    background: #4813c4;
+    pad: 10px 0;
+    font-size: 18px;
+    color: white;
+}
