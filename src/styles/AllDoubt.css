@@ -11,9 +11,9 @@
 
 /* each doubt */
 .reach-doubt-cart{
-    background: #000C66;
+    background: #B9B7BD;
     margin: 30px 10px;
-    color: lightgrey;
+    color: black;
     padding: 15px 20px;
     border-radius: 10px;
 }
@@ -26,6 +26,7 @@
     border: 2px solid #4e4e4e;
     padding: 15px;
     margin: 20px 0;
+    border-radius: 10px;
 }
 .doubt-description h1{
     font-size: 30px;
@@ -59,4 +60,19 @@
 .comments-form-container form button{
     font-size: 16px;
     padding: 5px 8px;
+}
+
+/* Comment design */
+.each-comments-container{
+    
+}
+.each-comment{
+    padding: 8px;
+    margin-top: 15px;
+    background:#a2a0a5;
+    border-radius: 10px;
+}
+.each-comment h5{
+    margin: 10px 0;
+    font-size: 16px;
 }

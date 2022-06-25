@@ -8,6 +8,7 @@ const Home = React.lazy(() => import('../pages/Home'));
 const Login = React.lazy(() => import('../components/Rregister/Login'));
 const Register = React.lazy(() => import('../components/Rregister/Register'));
 const RaiseDoubt = React.lazy(() => import('../pages/RaiseDoubt'));
+const YourDoubt = React.lazy(() => import('../pages/YourDoubt'));
 
 const Body = () => {
     return (
@@ -17,9 +18,10 @@ const Body = () => {
                 <Route path="/register" element={<Register />} />
                 {/* private route manage */}
                 <Route path='/*' element={<PrivateOutlet />}>
-                    <Route path="raise_doubt" element={<RaiseDoubt />} />
                     <Route path="home" element={<Home />} />
                     <Route path="all_doubt" element={<Home />} />
+                    <Route path="raise_doubt" element={<RaiseDoubt />} />
+                    <Route path="your_doubt" element={<YourDoubt />} />
                 </Route>
             </Routes>
         </Suspense>
