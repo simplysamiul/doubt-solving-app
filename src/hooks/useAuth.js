@@ -64,18 +64,8 @@ const useAuth = () =>{
         }))
         .finally(() => setIsLoading(false))
     };
-
-    // check role
-    useEffect(() =>{
-        AuthService.getSpecificUser(user.email)
-        .then(res => {
-            setRole(res.role);
-        })
-        .catch(error => {})
-    },[user.email]);
-
-    // Observer
-    useEffect(() =>{
+     // Observer
+     useEffect(() =>{
         const unSubscribe = onAuthStateChanged(auth, (user) =>{
            if(user){
               setUser(user);
@@ -86,6 +76,16 @@ const useAuth = () =>{
        });
        return () => unSubscribe;
    }, [auth]);
+
+
+    // check role
+    useEffect(() =>{
+        AuthService.getSpecificUser(user.email)
+        .then(res => {
+            setRole(res.role);
+        })
+        .catch(error => {})
+    },[user.email]);
 
    // Log Out 
    const logOut = () =>{

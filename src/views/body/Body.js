@@ -13,14 +13,13 @@ const Body = () => {
     return (
         <Suspense fallback={<Preloader />}>
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/home" element={<Home />} />
-                <Route path="/all_doubt" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 {/* private route manage */}
                 <Route path='/*' element={<PrivateOutlet />}>
                     <Route path="raise_doubt" element={<RaiseDoubt />} />
+                    <Route path="home" element={<Home />} />
+                    <Route path="all_doubt" element={<Home />} />
                 </Route>
             </Routes>
         </Suspense>

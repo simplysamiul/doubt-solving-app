@@ -1,0 +1,62 @@
+/* all doubt */
+.all-doubts-area{
+    margin: 80px;
+    padding: 5px;
+    font-family: serif;
+}
+.all-doubt-container{
+    width: 100%;
+    margin: auto;
+}
+
+/* each doubt */
+.reach-doubt-cart{
+    background: #000C66;
+    margin: 30px 10px;
+    color: lightgrey;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+.doubt-uploader-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.doubt-description{
+    border: 2px solid #4e4e4e;
+    padding: 15px;
+    margin: 20px 0;
+}
+.doubt-description h1{
+    font-size: 30px;
+}
+.comment-area{
+    margin-top: 20px;
+    border-top: 2px solid #4e4e4e;
+}
+
+/* doubt form */
+.comments-form-area{
+    padding: 5px 10px;
+}
+.comments-form-container form{
+    width: 100%;
+    margin: auto;
+    padding: 15px 0;
+
+}
+.comments-form-container form input{
+    width: 85%;
+    font-size: 18px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    background: #e2e2e2;
+}
+.comments-form-container form input:focus{
+    outline: none;
+    border: 2px solid grey;
+}
+.comments-form-container form button{
+    font-size: 16px;
+    padding: 5px 8px;
+}

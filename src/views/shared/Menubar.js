@@ -9,7 +9,7 @@ const Menubar = () => {
             <div className="menu-container">
                 <div className="menu-content">
                     <div className="menu-items">
-                        <Link to="/all_doubt">All Doubt</Link>
+                        {user.email && <Link to="/all_doubt">All Doubt</Link>}
                         {role === "student" && <Link to="/your_doubt">Your Doubt</Link>}
                         {role === "student" &&<Link to="/raise_doubt">Raise Doubt</Link>}
                         {role === "teacher" &&<Link to="/Unresolved">Unresolved</Link>}

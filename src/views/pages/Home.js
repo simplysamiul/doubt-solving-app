@@ -1,10 +1,11 @@
 import React from 'react';
+import AllDoubts from '../components/AllDoubts';
 
 const Home = () => {
     return (
-        <div>
-           This is home page 
-        </div>
+        <>
+           <AllDoubts />
+        </>
     );
 };
 
