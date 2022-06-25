@@ -47,7 +47,7 @@
 
 }
 .comments-form-container form input{
-    width: 85%;
+    width: 85% !important;
     font-size: 18px;
     padding: 5px 8px;
     border-radius: 5px;

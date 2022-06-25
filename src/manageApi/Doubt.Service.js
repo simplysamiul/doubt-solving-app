@@ -18,8 +18,7 @@ class DoubtService {
         return data;
     }
     async getSpecificDoubt(email){
-        console.log(email);
-        const {data} = httpReq.get(`/yourdoubt?email=${email}`)
+        const {data} = await httpReq.get(`/yourdoubt?email=${email}`);
         return data;
     }
 }
