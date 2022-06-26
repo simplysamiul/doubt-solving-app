@@ -32,10 +32,9 @@ export default function Dialoge({setOpen, open, doubt}) {
       setloading(false);
       reset();
       setOpen(false);
-      console.log(res)
+      window.location.reload();
     })
     .catch(err => console.log(err))
-    console.log(soluation);
   }
   return (
     <>

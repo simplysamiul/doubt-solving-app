@@ -7,6 +7,7 @@ import '../../../styles/UnResolvedDoubts.css';
 const UnResolvedDoubts = () => {
     const [doubts, setDoubts] = useState([]);
     const [loading, setLoading] = useState(false);
+    const unResolved = doubts.filter((items) => items.status !== "resolved" );
     useEffect(() =>{
         setLoading(true)
         DoubtService.getAllDoubt()
@@ -17,7 +18,6 @@ const UnResolvedDoubts = () => {
         .catch(err => {})
     },[]);
     // Filter unresolved data
-    const unResolved = doubts.filter((items) => items.status !== "resolved" );
     return (
         <div className='unresoolved-doubts-area'>
             <h1>Solve Doubts</h1>
@@ -30,6 +30,7 @@ const UnResolvedDoubts = () => {
                     />)
                 }
             </div>}
+            {unResolved.length === 0 && <h3 style={{textAlign:"center"}}>Don't have any doubt</h3>}  
         </div>
     );
 };

@@ -31,7 +31,7 @@ const useAuth = () =>{
                 //redirect to home page after create account
                 navigate("/");
                 window.location.reload();
-                console.log(res)})
+            })
             .catch(error => setError(error.message))
             // send name to the firebase
             updateProfile(auth.currentUser, {
@@ -57,6 +57,7 @@ const useAuth = () =>{
             // Pgae redirect
             const destination = location?.state?.from || "/";
                 navigate(destination);
+                window.location.reload();
         })
         .catch((error =>{
             const errorMessage = error.message;

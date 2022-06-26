@@ -25,6 +25,10 @@ class DoubtService {
         const {data} = await httpReq.update(`/unresolved?id=${id}`, body);
         return data;
     }
+    async getResolvedData(email){
+        const {data} = await httpReq.get(`/resolved?email=${email}`)
+        return data;
+    }
 }
 
 export default new DoubtService();
