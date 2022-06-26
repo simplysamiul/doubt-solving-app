@@ -12,6 +12,7 @@ const UnResolvedDoubt = ({doubt}) => {
             <button variant="outlined" onClick={() => setOpen(true)}> Accept </button>
             </div>
             <Dialoge
+            doubt={doubt}
             open={open}
             setOpen={setOpen}
             />

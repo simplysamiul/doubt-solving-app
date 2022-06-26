@@ -1,0 +1,43 @@
+.dialoge-area{
+    font-family: serif;
+    padding: 10px 20px;
+}
+.dialog-title h3{
+    font-size: 25px;
+}
+.dialog-description p{
+    font-size: 18px;
+}
+.answer-form{
+    margin-top: 30px;
+}
+.answer-form h4{
+    color: #4813c4;
+}
+.answer-form form textarea{
+    display: block;
+    width: 90%;
+    margin: auto;
+    padding: 5px;
+    font-size: 18px;
+}
+.answer-form form textarea:focus{
+    outline: none;
+    border: 2px solid grey;
+}
+.answer-form form button{
+    display: block;
+    width: 92%;
+    margin: auto;
+    margin-top: 20px;
+    border: none;
+    background: #4813c4;
+    font-size: 18px;
+    color: white
+}
+.dialog-close-button{
+    background: #d60d0d;
+    color: white;
+    border: none;
+
+}
