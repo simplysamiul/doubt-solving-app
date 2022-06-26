@@ -10,6 +10,7 @@ const Register = React.lazy(() => import('../components/Rregister/Register'));
 const RaiseDoubt = React.lazy(() => import('../pages/RaiseDoubt'));
 const YourDoubt = React.lazy(() => import('../pages/YourDoubt'));
 const UnResolved = React.lazy(() => import('../pages/UnResolved'));
+const YourResolved = React.lazy(() => import('../pages/YourResolved'));
 
 const Body = () => {
     return (
@@ -19,11 +20,13 @@ const Body = () => {
                 <Route path="/register" element={<Register />} />
                 {/* private route manage */}
                 <Route path='/*' element={<PrivateOutlet />}>
+                    <Route index element={<Home />} />
                     <Route path="home" element={<Home />} />
                     <Route path="all_doubt" element={<Home />} />
                     <Route path="raise_doubt" element={<RaiseDoubt />} />
                     <Route path="your_doubt" element={<YourDoubt />} />
                     <Route path="Unresolved" element={<UnResolved />} />
+                    <Route path="your_resolved" element={<YourResolved />} />
                 </Route>
             </Routes>
         </Suspense>
