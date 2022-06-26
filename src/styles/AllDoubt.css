@@ -69,7 +69,7 @@
     padding: 15px 0;
 
 }
-.comments-form-container form input{
+.comment-field{
     width: 85% !important;
     font-size: 18px;
     padding: 5px 8px;
@@ -77,11 +77,11 @@
     background: #e2e2e2;
     border: 2px solid #6f8da8;
 }
-.comments-form-container form input:focus{
+.comment-field:focus{
     outline: none;
     border: 2px solid #6f8da8;
 }
-.comments-form-container form button{
+.comment-button{
     font-size: 16px;
     padding: 5px 8px;
 }

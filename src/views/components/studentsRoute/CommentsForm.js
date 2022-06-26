@@ -23,8 +23,8 @@ const CommentsForm = ({_id}) => {
         <div className='comments-form-area'>
             <div className="comments-form-container">
             <form onSubmit={handleSubmit(onSubmit)}>
-                    <input type="text" placeholder="Write a comments...." {...register("comment", { required: true })} />
-                    <button type="submit">Submit</button>
+                    <input className="comment-field" type="text" placeholder="Write a comments...." {...register("comment", { required: true })} />
+                    <button className="comment-button" type="submit">Submit</button>
                 </form>
             </div>
             <div className="students-comments-area">
