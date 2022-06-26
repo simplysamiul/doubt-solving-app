@@ -1,1 +1,3 @@
 Description: This is a student's doubt solving app. There are students can upload his/her doubt or problem. after that teacher or instructor can be give soluation. Each studet see all the doubt and specifically he/she can see his/her own uploaded doubt and after posting his/her doubt if any teacher given the soluation then he/she can see this soluation and teachers name. Also students can be comment in the another student posts. And teacher can see his own resolved doubt. So, this description can be see visually inside of this link : 
+
+https://task-app-8c7c2.web.app/
