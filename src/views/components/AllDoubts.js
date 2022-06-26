@@ -3,6 +3,7 @@ import DoubtService from '../../manageApi/Doubt.Service';
 import Preloader from '../custome/Preloader';
 import EachDoubt from './EachDoubt';
 import '../../styles/AllDoubt.css';
+import useAuth from '../../hooks/useAuth';
 
 const AllDoubts = () => {
     const [doubts, setDoubts] = useState([]);

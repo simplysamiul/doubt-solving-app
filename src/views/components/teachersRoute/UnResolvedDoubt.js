@@ -1,6 +1,6 @@
 import * as React from 'react';
-import '../../../styles/UnResolvedDoubts.css';
 import Dialoge from '../../custome/Dialoage';
+import '../../../styles/UnResolvedDoubts.css';
 
 const UnResolvedDoubt = ({doubt}) => {
     const {title} = doubt;

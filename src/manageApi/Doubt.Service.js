@@ -21,6 +21,10 @@ class DoubtService {
         const {data} = await httpReq.get(`/yourdoubt?email=${email}`);
         return data;
     }
+    async postTeacherAns(id, body){
+        const {data} = await httpReq.update(`/unresolved?id=${id}`, body);
+        return data;
+    }
 }
 
 export default new DoubtService();
