@@ -4,9 +4,9 @@ import { useForm } from "react-hook-form";
 import DialogActions from '@mui/material/DialogActions';
 import Slide from '@mui/material/Slide';
 import useAuth from '../../hooks/useAuth';
-import '../../styles/Dialoge.css';
 import DoubtService from '../../manageApi/Doubt.Service';
 import Preloader from './Preloader';
+import '../../styles/Dialoge.css';
 
 const Transition = React.forwardRef(function Transition(
   props, ref,
@@ -15,7 +15,7 @@ const Transition = React.forwardRef(function Transition(
 });
 
 export default function Dialoge({setOpen, open, doubt}) {
-  const {description, email, name, title, _id} = doubt;
+  const {description, title, _id} = doubt;
   const [loading, setloading] = React.useState(false);
   const {user} = useAuth();
   // handel form
